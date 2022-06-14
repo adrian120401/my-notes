@@ -4,17 +4,17 @@ import './TaskForm.css'
 
 function TaskForm(){
     const [newTasksValue,setnewTasksValue]=React.useState('')
-    const {addTasks,setOpenModal}=React.useContext(TaskContext)
+    const {addTask,setOpenModal}=React.useContext(TaskContext)
     const onCancel = () =>{
         setOpenModal(false)
     }
     const onSubmit = (event) =>{
         event.preventDefault()
-        addTasks(newTasksValue)
+        addTask(newTasksValue)
         setOpenModal(false)
     }
     const onChange = (event) =>{
-        setnewTasksValue(event.taget.value)
+        setnewTasksValue(event.target.value)
     }
     return(
         <form onSubmit={onSubmit}>

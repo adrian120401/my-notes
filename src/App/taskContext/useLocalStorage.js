@@ -26,7 +26,7 @@ function useLocalStorage(itemName, initialValue){
           setError(error)
         }
       }, 1000)
-    },[])
+    })
       
     
       //para las tareas, por default va a tener las tareas con un array vacio
